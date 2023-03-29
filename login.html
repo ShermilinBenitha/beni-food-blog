@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title>
+<link href="chefCap.png" rel="icon">
+<script src="https://kit.fontawesome.com/2330d1adcc.js" crossorigin="anonymous"></script>
+<style>
+body{
+	background-color:#0f0b36;
+	color:white;
+	text-align:center;
+	justify-content: center;
+}
+div{
+	background-color: black;
+    backdrop-filter: sepia(100%);
+    padding: 20px;
+    margin: 30px 50px;
+}
+table{
+	text-align:left;	
+}
+ td {
+    padding: 10px 0 ;
+}
+label{
+	font-size:22px;
+}
+[type="submit"]{
+	border-radius:10px;
+	margin:10px 0 0 100px;
+	padding: 10px 20px;
+	width: 80px;
+	background-color:skyblue;
+	border:1px inset #aaa;
+	font-weight:bold;
+}
+input[type="text"],input[type="password"]{
+	box-sizing:border-box;
+	border-radius:5px;
+	padding:5px;
+	width:170px;
+}
+input#us{
+	width: 200px;
+}
+input#rem{
+	accent-color:blue;
+}
+input:hover{
+	background-color:skyblue;
+	border-color:blue;
+}
+a{
+	padding-left:100px;
+}
+a:link{
+	color:#390380;
+}
+#b{
+	border: 2px inset;
+	padding:3px 3px 3px 5px;
+}
+
+</style>
+</head>
+<body>
+<div>
+<h1>Login</h1>
+<center>
+<table>
+<tr>
+	<td><label class=l1>User Name </label></td>
+	<td colspan="2"><input type="text" name="us" id="us" required ></td>
+</tr>
+<tr>
+	<td><label class=l2>Password   </label></td>
+	<td ><input type="password" name="pw" id="password" required ></td>
+	<td><button id="b"  onClick="showpw()"> <i class="fa-solid fa-eye" id="tog"></i></button> </td>
+</tr>
+<tr>
+	<td><input type="checkbox" id="rem" name="rembutton"> &nbsp;Remember Me </td>
+</tr>
+</table>
+</center>
+<input type="submit" value="Login"><br><br>
+<a href="signIn.html" target="_blank">Create a New Account</a>
+</div>
+<script>	 
+function showpw(){	
+	 p=document.getElementById("password");
+	 i=document.getElementById("tog");
+	 b=document.getElementById("b");
+	if(p.type==="password"){
+		p.type="text";
+		i.setAttribute("class","fa-solid fa-eye-slash");
+		b.style.borderStyle="outset";
+	}
+	else{
+		p.type="password";
+		i.setAttribute("class","fa-solid fa-eye");
+		b.style.borderStyle="inset";
+	}
+}
+</script>
+</body>
+</html>

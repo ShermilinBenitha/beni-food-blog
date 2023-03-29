@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact Us</title>
+<link href="chefCap.png" rel="icon">
+<script src="https://kit.fontawesome.com/2330d1adcc.js" crossorigin="anonymous"></script>
+<style>
+ body{
+    margin:0;
+    user-select:none;
+    font-family:cursive;
+    cursor:url(tom.png),auto;
+    max-height: 1300px;
+}
+ .menubar{  
+    display:flex;
+    background-color: #000;
+    padding:10px 0 ;
+    width:100%;
+    overflow:hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+ }  
+ #menu{
+    flex:20%;
+    padding:5px; 
+    text-align: center;
+ }
+#menu a{  
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+ }
+ #menu a:hover{  
+    color:rgb(207, 11, 11);
+ }
+ .head{
+    margin:10px;
+ }
+ .conhead{
+    text-align: center;
+ }
+ @media only screen and (min-width: 800px){
+.call{
+    border-radius: 100%;
+    width: 230px;
+    height: 230px;
+    text-align: center;
+    background-color: rgb(219, 5, 5);
+    transform: translate(60%, 30%);
+}
+#phone{
+    transform: translate(0%, 100%);
+    font-size: 60px;
+}
+}
+@media only screen and (max-width: 800px){
+.call{
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    background-color: rgb(219, 5, 5);
+    transform: translate(30%, 60%);
+}
+#phone{
+    transform: translate(0%, 70%);
+    font-size: 40px;
+}
+}
+#callus{
+   font-size: 25px;
+   font-weight:bold
+}
+.box{
+   position:absolute;
+   left:50%;
+   top:40%;
+   margin: auto;
+   padding:50px;
+}
+#butt{
+   width:205px;
+   padding:5px;
+   font-weight: 700;
+   background-color: rgb(235, 16, 16);
+}
+input[type="text"],[type="email"]{
+   width:200px;
+   height:20px;
+}
+textarea{
+   width:200px;
+   height:50px;
+}
+footer{
+  background-color:#000;
+  width:100%;
+  height:50px;
+  position:relative;
+  top:140px;
+}
+#sm-bar-login{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  overflow: hidden;
+}
+.sm-bar {
+  float: left;
+}
+.sm-bar a{
+  text-decoration:none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding:14px 16px;
+}
+.sm-bar a:hover {
+  color:#f21b1b;
+}
+.copyright{
+  position:relative;
+  top:-45px;
+  font-size:15px;
+  font-family: times New Roman;
+}
+</style>
+</head>
+<body>
+    <div class="menubar">
+        <span id="menu"><a href="index.html" target="_self"><i class="fas fa-home" style="font-size:50px;"></i><br>Home	</a></span>
+        <span id="menu"><a href="drinks.html" target="_blank"><i class="fas fa-glass-martini-alt" style="font-size:50px;"></i><br>Drinks</a></span>
+        <span id="menu"><a href="bread.html" target="_blank"><i class="fas fa-bread-slice" style="font-size:50px;"></i><br>Bread</a></span>
+        <span id="menu"><a href="sidedish.html" target="_blank"><i class="fas fa-carrot" style="font-size:50px;"></i><br>Side Dish</a></span>
+        <span id="menu"><a href="#" target="_self"><i class="fas fa-phone" style="font-size:50px;"></i><br>Contact Us</a></span>
+   </div>
+   <div class="head">
+    <h1 class="conhead">Contact Us</h1>
+    <h3>For More Details Please Contact : </h3>
+   </div>
+   <div class="call">
+         <i class="fas fa-phone"  id="phone"></i>
+          <br><br><br>
+          <p id="callus">call us</p>
+   </div>
+   <div class="box" style="background-color: #000; color:white;">
+         <label for="name">NAME</label><br>
+         <input type="text" name="n" id="n"><br>
+         <label for="email">EMAIL</label><br>
+         <input type="email" name="e" id="e"><BR>
+         <label>Message</label><br>
+         <textarea></textarea><br>
+         <input type="submit" id="butt" value="submit">
+   </div>
+   <footer>
+      <ul id=sm-bar-login >
+      <li class="sm-bar"><a class="fa fa-facebook" href="#" target="_blank"></a></li> 
+      <li class="sm-bar"><a class="fa fa-twitter" href="#" target="_blank"></a></li> 
+      <li class="sm-bar"><a class="fa fa-instagram" href="#" target="_blank"></a></li> 
+      <li class="sm-bar"><a class="fa fa-youtube" href="#" target="_blank"></a></li>
+      </ul>
+      <p class=copyright style="float:right;color:white;">Copyright ©  All rights reserved.</p>
+   </footer>
+</body>
+</html>

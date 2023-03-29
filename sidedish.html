@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head><title>Side Dish</title>
+<link href="chefCap.png" rel="icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/2330d1adcc.js" crossorigin="anonymous"></script>
+<style>
+ body{
+    margin:0;
+    user-select:none;
+    font-family:cursive;
+    cursor:url(tom.png),auto;
+    height: 1300px;
+}
+ .menubar{  
+    display:flex;
+    background-color: #000;
+    padding:10px 0 ;
+    width:100%;
+    overflow:hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+ }  
+ #menu{
+    flex:20%;
+    padding:5px; 
+    text-align:center;
+ }
+#menu a{  
+    color:white;
+    text-decoration: none;
+ }
+ #menu a:hover{  
+    color:rgb(207, 11, 11);
+ }
+#sidedishhead{
+   text-align: center;
+   font-size: 40px;
+}
+@media only screen and (min-width: 1000px) {
+.d{
+   display:grid;
+   grid: 550px / auto auto auto auto; 
+}
+}
+@media only screen and (max-width: 1000px) {
+.d{
+   display:grid;
+   grid: 550px / auto auto auto; 
+}
+}
+@media only screen and (max-width: 800px) {
+.d{
+   display:grid;
+   grid: 550px / auto auto; 
+}
+}
+@media only screen and (max-width: 500px) {
+.d{
+   display:grid;
+   grid: 550px / auto; 
+}
+}
+.sidedish{
+   box-shadow: 2px 2px 5px 5px rgb(217, 208, 219);
+   justify-content: center;
+   overflow: auto;
+   margin: 10px;
+   padding: 25px;
+}
+.sidedish a{
+   padding: 15px;
+   text-decoration: none;
+   color:#000;
+   text-align:center;
+   justify-content: center;
+}
+footer{
+  background-color:#000;
+  width:100%;
+  height:50px;
+  position:relative;
+  top:20px;
+}
+#sm-bar-login{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  overflow: hidden;
+}
+.sm-bar {
+  float: left;
+}
+.sm-bar a{
+  text-decoration:none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding:14px 16px;
+}
+.sm-bar a:hover {
+  color:#f21b1b;
+}
+.copyright{
+  position:relative;
+  top:-45px;
+  font-size:15px;
+  font-family: times New Roman;
+}
+</style>
+</head>
+<body>
+   <div class="menubar">
+        <span id="menu"><a href="index.html" target="_self"><i class="fas fa-home" style="font-size:50px;"></i><br>Home	</a></span>
+        <span id="menu"><a href="drinks.html" target="_blank"><i class="fas fa-glass-martini-alt" style="font-size:50px;"></i><br>Drinks</a></span>
+        <span id="menu"><a href="bread.html" target="_blank"><i class="fas fa-bread-slice" style="font-size:50px;"></i><br>Bread</a></span>
+        <span id="menu"><a href="#" target="_self"><i class="fas fa-carrot" style="font-size:50px;"></i><br>Side Dish</a></span>
+        <span id="menu"><a href="contactUs.html" target="_blank"><i class="fas fa-phone" style="font-size:50px;"></i><br>Contact Us</a></span>
+   </div>
+<h2 id="sidedishhead">Side Dish</h2>
+<div class="d">
+   <div class="sidedish">
+      <a href="sidedish1.html" target="_blank">
+         <img src="sidedish1.jpg"  width="240px" height="360px">
+         <h4>GLAZED CARROTS</h4>
+      </a>
+   </div>
+   <div class="sidedish">
+      <a href="sidedish2.html" target="_blank">
+         <img src="sidedish2.jpg"  width="240px" height="360px">
+         <h4>ROASTED SWEET POTATOES</h4>
+      </a>
+   </div>
+   <div class="sidedish">
+      <a href="sidedish3.html" target="_blank">
+         <img src="sidedish3.jpg"  width="240px" height="360px">
+         <h4>ROASTED CAULIFLOWER</h4>
+      </a>
+   </div>
+   <div class="sidedish">
+      <a href="sidedish4.html" target="_blank">
+         <img src="sidedish4.jpg"  width="240px" height="360px">
+         <h4>WARM POTATO SALAD</h4>
+      </a>
+   </div>
+   <div class="sidedish">
+      <a href="sidedish5.html" target="_blank">
+         <img src="sidedish5.jpg"  width="240px" height="360px">
+         <h4>CANDIED YAMS</h4>
+      </a>
+   </div>
+</div>
+<footer>
+   <ul id=sm-bar-login >
+   <li class="sm-bar"><a class="fa fa-facebook" href="#" target="_blank"></a></li> 
+   <li class="sm-bar"><a class="fa fa-twitter" href="#" target="_blank"></a></li> 
+   <li class="sm-bar"><a class="fa fa-instagram" href="#" target="_blank"></a></li> 
+   <li class="sm-bar"><a class="fa fa-youtube" href="#" target="_blank"></a></li>
+   </ul>
+   <p class=copyright style="float:right;color:white;">Copyright ©  All rights reserved.</p>
+</footer>
+</body>
+</html>

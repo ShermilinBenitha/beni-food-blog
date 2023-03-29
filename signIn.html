@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head><title>Registration Form</title>
+<link href="chefCap.png" rel="icon">
+<style>
+body{
+  background-image:url(registerbg.jpg);
+  background-repeat:no-repeat;
+  background-size:auto;
+  float:right;
+  position:absolute;
+}
+.container{
+  margin:10px 100px 10px 700px;
+  background:linear-gradient(#edbebe, #fc050d);
+  padding:5px 20px;
+  position:absolute;
+  width:400px;
+}
+.title {
+  font-size: 35px;
+  background:linear-gradient(#cf0808, #f53333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+fieldset{
+ border:1px solid black;
+}
+legend{
+  font-size:20px;
+  color:#c42d2d;
+}
+#l{
+  background: #DDDDDD;
+  padding: 8px;
+  text-align: center;
+}
+.radio1:checked~#label1{
+  color:#2403fc;
+}
+.radio2:checked~#label2{
+  color:#fc0384;
+}
+.radio3:checked~#label3{
+  color:#24572c;
+}
+.radio1{
+  accent-color:#2403fc;
+}
+.radio2{
+  accent-color:#fc0384;
+}
+.radio3{
+  accent-color:#24572c;
+}
+.d1{
+  display:flex;
+}
+.d11{
+  flex:50%;
+}
+.d12{
+  flex:50%;
+}
+input{
+	border-radius:5px;
+	padding:3px;
+	border:none;
+}
+input:hover{
+	background-color:pink;
+}
+input[type="submit"]{
+  margin:5px;
+  float:right;
+  padding:5px 10px;
+  border-radius:5px;
+  border:none;
+}
+input[type="reset"]{
+  margin:5px;
+  float:left;
+  padding:5px 10px;
+  border-radius:5px;
+  border:none;
+}
+input[type="submit"]:hover{
+  background-color:pink;
+  border-color:red;
+}
+input[type="reset"]:hover{
+  background-color:pink;
+  border-color:red;
+}
+select{
+  border-radius:5px;
+  padding:3px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1 class="title">Registration Form</h1>
+<form method="post" action="login.html">
+<table>
+<fieldset>
+<legend>Name:</legend>
+    <label for="fname">First name &nbsp </label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name &nbsp </label>
+    <input type="text" id="lname" name="lname"><br><br>
+</fieldset>
+<fieldset>
+<legend>Gender : </legend>
+    <input type="radio" class="radio1" name="g" value="m" >
+		<label id="label1" for="radio1">Male</label>
+	<input type="radio" class="radio2" name="g" value="f" >
+		<label id="label2" for="radio2">Female</label>
+		<input type="radio" class="radio3" name="g" value="o" >
+		<label id="label3" for="radio3">Others</label><br>
+</fieldset>
+<div class="d1">
+<div class="d11"><br>
+	<label for="dob">DOB &nbsp &nbsp </label>
+		<input type="date" name="dob" required><br><br>
+	<label for="mn">Mobile No</label>
+		<input type="number" name="mn" required><br><br>
+	<label for="ei">Email Id</label>
+		<input type="text" name="ei" required><br><br>
+	<label for="pw">Enter Password</label>
+		<input type="password" name="pw" required><br><br>	
+	<label for="rpw">Re-Enter Password</label>
+		<input type="password" name="rpw" required><br><br>	
+</div>
+<div class="d12">
+<fieldset>
+	<legend>Address</legend>
+	<label>District </label>    	
+		<select name="dis">
+				<option value="" >..select..</option>
+				<option value="ci" >Chennai</option>
+				<option value="cr" >Coimbatore</option>
+				<option value="ti" >Tirunelveli</option>
+		</select><br><br>
+	<label>State &nbsp &nbsp </label>    		
+		<select name="st">
+				<option value="" >..select..</option>
+				<option value="tn" >Tamil Nadu</option>
+		</select><br><br>
+	<label for="dn">Door No	</label>
+		<input type="text" name="dn" required><br><br>
+	<label for="sn">Street Name</label>
+		<input type="text" name="sn" required><br><br>
+	<label for="pc">PinCode</label>
+		<input type="number" name="pc" required><br><br>
+</fieldset>
+</div>
+</div>
+<input type="reset"  value="Clear">
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

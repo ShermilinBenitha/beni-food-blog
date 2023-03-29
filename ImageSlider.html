@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head><title></title>
+<link href="my html icon.png" rel="icon">
+<style>
+#imageslider{
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  width:100%; 
+  height :510px;
+}
+.fadeSlider{
+  position:absolute;	
+  width:100%; 
+  height :510px;
+  overflow:hidden;
+}
+.fadeSlider img{
+  height:100%;
+  width:100%;
+  Animation:fadein 2s;
+}
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+#btm_slider{
+  position:absolute;
+  bottom:2.5%;
+  left:50%;
+  display:flex;
+  transform:translateX(-50%);
+}
+#btm_slider span{
+  height:15px;
+  width:50px;
+  border:3px solid white;
+  margin:0 3px;
+  cursor:pointer;	
+}
+#btm_slider span:hover{
+  background:white;
+}
+#slider span{
+  color:white;
+  font-size:45px;
+  cursor:pointer;
+}
+#slider span:hover{
+  color:#454343;
+}
+.prev{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+}
+.next{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+}
+</style>
+<script>
+var indexValue=1;
+showImg(indexValue);
+
+function btm_slide(e){
+	showImg(indexValue=e);
+}
+function side_slide(e){
+	showImg(indexValue+=e);
+}
+function showImg(e){
+var i;
+const img=document.querySelectorAll(".fadeSlider img");
+const slider=document.querySelectorAll("#btm_slider span");
+if(e>img.length){
+	indexValue=1;
+}
+if(e<1){
+	indexValue=img.length;
+}
+for(i=0;i<img.length;i++){
+	img[i].style.display="none";
+}
+for(i=0;i<slider.length;i++){
+	slider[i].style.background="none";
+}
+img[indexValue-1].style.display="block";
+slider[indexValue-1].style.background="white";
+}
+</script>
+</head>
+<body>
+<div id="imageslider">
+  <div class="fadeSlider">
+	<img src="slide1.jpg" id="slider">
+	<img src="slide2.jpg" id="slider">
+	<img src="slide3.jpg" id="slider">
+  </div>
+  <div id="btm_slider">
+    <span onclick="btm_slide(1)"></span>  
+    <span onclick="btm_slide(2)"></span>  
+    <span onclick="btm_slide(3)"></span>  
+  </div>  
+  <div id="slider">
+  <span class="prev" onclick="side_slide(-1)">&#10094;</span>
+  <span class="next" onclick="side_slide(1)">&#10095;</span>
+  </div>
+</div>
+</body>
+</html>
