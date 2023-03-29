@@ -1,1 +1,3 @@
-# beni-food-blog
+# Beni-food-blog
+# Hot and Delicious Food 
+Cook at Home
